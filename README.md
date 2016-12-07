@@ -1,2 +1,1 @@
-# STEAMTransit
-Transit in the STEAM District
+# steamcoin_wallet

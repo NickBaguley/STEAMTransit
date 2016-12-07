@@ -1,0 +1,27 @@
+%nav.grey.darken-4
+  .nav-wrapper
+    %ul.left
+      %li.no-padding
+        %img{src: image_path('Mu_no_background.png'), height: '60px'}
+      %li
+        = link_to 'Home', root_path, {class: 'blue-text'}
+    %ul#nav-mobile.right.hide-on-medium-and-down
+      %li
+        = link_to 'Pareto', registration_path, {class: 'blue-text text-lighten-2'}
+      %li
+        = link_to 'Marketplace', speakers_path, {class: 'blue-text text-lighten-3'}
+      %li
+        = link_to 'About STEAM', about_path, {class: 'blue-text text-lighten-4'}
+      %li
+        = link_to 'Log In', new_user_session_path
+.fixed-action-btn.on-click.red-text
+  %i{class:'medium material-icons'} menu
+  %ul
+    %li.btn-floating.red
+      %i{class:'material-icons'} insert_chart
+    %li.btn-floating.yellow.darken-1
+      %i{class:'material-icons'} format_quote
+    %li.btn-floating.green
+      %i{class:'material-icons'} publish
+    %li.btn-floating.blue
+      %i{class:'material-icons'} attach_file

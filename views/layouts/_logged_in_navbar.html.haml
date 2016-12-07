@@ -1,0 +1,29 @@
+%nav.grey.darken-4
+  .nav-wrapper
+    %ul.left
+      %li.no-padding
+        %img{src: image_path('Mu1.jpg'), height: '60px'}
+        %li
+          = link_to 'Home', root_path, {class: 'blue-text'}
+    %ul#nav-mobile.right.hide-on-medium-and-down
+      %li
+        = link_to 'Dashboard', dashboard_path, {class: 'blue-text'}
+      %li
+        = link_to 'Marketplace', awareness_path, {class: 'blue-text text-lighten-2'}
+      %li
+        = link_to 'Token', transactions_tokens_path, {class: 'blue-text text-lighten-3'}
+      %li
+        = link_to 'Coin', transactions_coins_path, {class: 'orange-text'}
+      %li
+        = link_to 'Logout', destroy_user_session_path, {method: 'delete'}
+.fixed-action-btn.on-click.red-text
+  %i{class:'medium material-icons'} menu
+  %ul
+    %li.btn-floating.red
+      %i{class:'material-icons'} insert_chart
+    %li.btn-floating.yellow.darken-1
+      %i{class:'material-icons'} format_quote
+    %li.btn-floating.green
+      %i{class:'material-icons'} publish
+    %li.btn-floating.blue
+      %i{class:'material-icons'} attach_file

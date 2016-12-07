@@ -1,0 +1,307 @@
+.container
+  %h3.blue-text.center-align P.A.R.E.T.O. Dashboard
+  %hr
+.parallax-container
+  .parallax
+    %img{src: image_path('ESLd'), width:'100%'}
+  .parallax-title
+    %h2.white-text.center-align STEAM Community
+.section.grey.lighten-4
+  .row
+    .col.s10.offset-s1
+      .center
+      %h3.blue-text.center-align Welcome to your Dashboard
+      %iframe{src: "https://alton.shinyapps.io/poc_app/", width: '100%', height: '500'}
+.container
+  %h5.blue-text.center-align STEAM Wallet
+  %hr
+  .row
+    .parallax-container
+      .parallax
+        %img{src: image_path('wallet'), width:'100%'}
+      .col.m6.center.section-padding
+        .card
+          .card-content
+          %ul.center-align
+            %li.no-padding
+              %img{src: image_path('Mu.jpg'), height: '60px'}
+            %h5.blue-text Total STEAM Token
+            %hr
+            %h5.bold.center-align #{number_to_human(@balance)}
+      .col.m6.center
+        .card
+          .card-content
+          %ul.center-align
+            %li.no-padding
+              %img{src: image_path('Mu2.jpg'), height: '60px'}
+            %h5.blue-text STEAMcoin
+            %hr
+            %h5.bold.center-align #{number_to_human(@balance)}
+      %hr
+      .col.s12.center
+        .btn.custom-button
+          =link_to 'Send Token', new_transaction_path, {class: 'white-text'}
+        .btn.custom-button.orange
+          =link_to 'Send Coin', new_transaction_path, {class: 'white-text'}
+  .container
+    %h5.blue-text.center-align Dashboard
+    %hr
+  .row
+    .col.m6.center
+      .card
+        .card-content
+          %h5.blue-text Token Recieved
+          %table.centered
+            %thead
+              %tr
+                %th.bold From
+                %th.bold Amount
+                %th.bold Details
+            %tbody
+              - @received.each do |r|
+                %tr
+                  %td
+                    = r.user.user_name
+                  %td
+                    = number_to_human(r.amount)
+                  %td
+                    = r.details
+    .col.m6.center
+      .card
+        .card-content
+          %h5.blue-text Coin Recieved
+          %table.centered
+            %thead
+              %tr
+                %th.bold From
+                %th.bold Frequency
+                %th.bold Amount
+            %tbody
+              - @received.each do |r|
+                %tr
+                  %td
+                    = r.user.user_name
+                  %td
+                    = number_to_human(r.amount)
+                  %td
+                    = r.details
+  .row
+    .col.m6.center
+      .card
+        .card-content
+          %h5.blue-text Token Sent
+          %table.centered
+            %thead
+              %tr
+                %th.bold Sent to
+                %th.bold Amount
+                %th.bold Details
+            %tbody
+              - @sent.each do |s|
+                %tr
+                  %td
+                    =User.user_name(s.receiver_id)
+                  %td
+                    = number_to_human(s.amount)
+                  %td
+                    = s.details
+    .col.m6.center
+      .card
+        .card-content
+          %h5.blue-text Coin Sent
+          %table.centered
+            %thead
+              %tr
+                %th.bold Sent to
+                %th.bold Frequency
+                %th.bold Amount
+            %tbody
+              - @sent.each do |s|
+                %tr
+                  %td
+                    =User.user_name(s.receiver_id)
+                  %td
+                    = number_to_human(s.amount)
+                  %td
+                    = s.details
+  .row
+    .container
+      %h5.blue-text.center-align Performance Timeline
+      %hr
+    .parallax-container
+      .parallax
+        %img{src: image_path('Levels.png'), width:'100%'}
+      .col.m6.center
+        .card
+          .card-content
+          %ul.center-align
+            %li.no-padding
+              %img{src: image_path('Mu.jpg'), height: '60px'}
+              %img{src: image_path('Mu2.jpg'), height: '60px'}
+            %h5.blue-text Baseline
+            %hr
+            %h5.bold.center-align #{number_to_human(@balance)}
+      .col.m6.center
+        .card
+          .card-content
+          %ul.center-align
+            %li.no-padding
+              %img{src: image_path('Mu2.jpg'), height: '60px'}
+            %h5.blue-text Offline
+            %hr
+            %h5.bold.center-align #{number_to_human(@balance)}
+      %hr
+      .col.m6.center
+        .card
+          .card-content
+          %ul.center-align
+            %li.no-padding
+              %img{src: image_path('Mu.jpg'), height: '60px'}
+            %h5.blue-text Online / Nearline
+            %hr
+            %h5.bold.center-align #{number_to_human(@balance)}
+      .col.m6.center
+        .card
+          .card-content
+          %ul.center-align
+            %li.no-padding
+              %img{src: image_path('Mu2.jpg'), height: '60px'}
+            %h5.blue-text GoalLine
+            %hr
+            %h5.bold.center-align #{number_to_human(@balance)}
+  .container
+    %h5.blue-text.center-align Pareto Balance
+    %hr
+  .row
+    .col.m6.center
+      .card
+        .card-content
+        %ul.center-align
+          %li.no-padding
+            %img{src: image_path('Mu.jpg'), height: '60px'}
+            %img{src: image_path('Mu2.jpg'), height: '60px'}
+          %h5.blue-text Creative v. Reactive
+          %hr
+          %h5.bold.center-align #{number_to_human(@balance)}
+    .col.m6.center
+      .card
+        .card-content
+        %ul.center-align
+          %li.no-padding
+            %img{src: image_path('Mu.jpg'), height: '60px'}
+            %img{src: image_path('Mu2.jpg'), height: '60px'}
+          %h5.blue-text Work v. Life
+          %hr
+          %h5.bold.center-align #{number_to_human(@balance)}
+  .row
+    .col.m6.center
+      .card
+        .card-content
+        %ul.center-align
+          %li.no-padding
+            %img{src: image_path('Mu.jpg'), height: '60px'}
+            %img{src: image_path('Mu2.jpg'), height: '60px'}
+          %h5.blue-text PersonalDNA
+          %hr
+          %h5.bold.center-align #{number_to_human(@balance)}
+    .col.m6.center
+      .card
+        .card-content
+        %ul.center-align
+          %li.no-padding
+            %img{src: image_path('Mu2.jpg'), height: '60px'}
+          %h5.blue-text ProfessionalDNA
+          %hr
+          %h5.bold.center-align #{number_to_human(@balance)}
+  %hr
+  .card
+    .card-content
+      %h5.blue-text Pareto Performance Dashboard
+      %table.centered
+        %thead
+          %tr
+            %th.bold Air
+            %img{src: image_path('vyykn.jpg'), height: '60px'}
+            %th.bold Water
+            %th.bold Light
+            %th.bold Comfort
+        %tbody
+          - @received.each do |r|
+            %tr
+              %td
+                = r.token_transaction_date
+              %td
+                = r.user.user_name
+              %td
+                = r.details
+              %td
+                = number_to_human(r.amount)
+  .card
+    .card-content
+      %h5.blue-text Pareto Services Dashboard
+      %table.centered
+        %thead
+          %tr
+          %img{src: image_path('Run.jpg'), height: '60px'}
+            %th.bold Fitness
+            %th.bold Nutrition
+            %th.bold Mind
+        %tbody
+          - @received.each do |r|
+            %tr
+              %td
+                = r.token_transaction_date
+              %td
+                = r.user.user_name
+              %td
+                = r.details
+              %td
+                = number_to_human(r.amount)
+  .card
+    .card-content
+      %h5.blue-text Freelance Dashboard
+      %table.centered
+        %thead
+          %tr
+            %th.bold Date
+            %th.bold Time
+            %th.bold Client
+            %th.bold Sprint
+            %th.bold Method/Process
+            %th.bold Deliverable
+            %th.bold Influence Quotient
+            %th.bold Amount
+            %th.bold Details - Effective?
+        %tbody
+          - @received.each do |r|
+            %tr
+              %td
+                = r.token_transaction_date
+              %td
+                = r.user.user_name
+              %td
+                = r.details
+              %td
+                = number_to_human(r.amount)
+        %thead
+          %tr
+            %th.bold Date
+            %th.bold Time
+            %th.bold Client
+            %th.bold Sprint
+            %th.bold Method/Process
+            %th.bold Deliverable
+            %th.bold Influence Quotient
+            %th.bold Amount
+            %th.bold Details - Effective?
+        %tbody
+          - @received.each do |r|
+            %tr
+              %td
+                = r.token_transaction_date
+              %td
+                = r.user.user_name
+              %td
+                = r.details
+              %td
+                = number_to_human(r.amount)

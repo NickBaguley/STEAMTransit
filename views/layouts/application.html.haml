@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title STEAM
+    %link{:href => "https://fonts.googleapis.com/css?family=Droid+Serif:400,700", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}
+    %script{:src => "http://d3js.org/d3.v3.min.js", :href => "skills.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    - if current_user
+      = render 'layouts/logged_in_navbar'
+    - else
+      = render 'layouts/homepage_navbar'
+    = yield
+  %footer
+    = render 'layouts/footer'

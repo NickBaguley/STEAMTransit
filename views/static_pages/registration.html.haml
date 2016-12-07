@@ -1,0 +1,97 @@
+.parallax-container
+  .parallax
+    %img{src: image_path('Zen.jpg'), width:'100%'}
+  .parallax-title.center-align
+    %h1.white-text.center-align P.A.R.E.T.O.
+    .btn.custom-button.center-align
+      = link_to 'Sign Up', new_user_registration_path, {method: :get, class:'white-text'}
+    %h4.white-text.center-align Personalized Autonomous Relativity Engine Tensor-Driven Orthological - Shared Intelligence
+.section.grey.lighten-4
+  .row
+    .col.s10.offset-s1
+      .center.section-padding
+        %h3 Shared Intelligence
+        %h5 A new paradigm. Your Paradigm.
+        .btn.custom-button
+          = link_to 'Join', new_user_registration_path, {method: :get, class:'white-text'}
+
+        %h5.blue-text Improve your performance by understanding your environment and yourself.
+        %p We can help your environment provide a 6% productivity increase. The right products and services can help you achieve more.
+
+        .btn-floating.btn-large.waves-effect.waves-light.red
+          %i{class:'material-icons'} person_pin
+        %h5 It's your data. Choose your path.
+        %h5 Know more about yourself than anyone else & build your future.
+.parallax-container
+  .parallax
+    %img{src: image_path('vapor2.jpg'), width:'100%'}
+  .parallax-title-right
+    %h1.white-text.right-align Shared Intelligence
+
+.container
+  %h3.blue-text.center-align P.A.R.E.T.O. Dashboard
+  %hr
+  .row
+    .col.m6.center
+      .card
+        .card-content
+        %ul.center-align
+          %li.no-padding
+            %img{src: image_path('Mu.jpg'), height: '60px'}
+          %h5.blue-text Baseline
+          %hr
+          %h5.bold.center-align #{number_to_human(@balance)}
+    .col.m6.center
+      .card
+        .card-content
+        %ul.center-align
+          %li.no-padding
+            %img{src: image_path('Mu2.jpg'), height: '60px'}
+          %h5.blue-text Offline
+          %hr
+          %h5.bold.center-align #{number_to_human(@balance)}
+  %hr
+  .row
+    .col.m6.center
+      .card
+        .card-content
+        %ul.center-align
+          %li.no-padding
+            %img{src: image_path('Mu.jpg'), height: '60px'}
+          %h5.blue-text Online / Nearline
+          %hr
+          %h5.bold.center-align #{number_to_human(@balance)}
+    .col.m6.center
+      .card
+        .card-content
+        %ul.center-align
+          %li.no-padding
+            %img{src: image_path('Mu2.jpg'), height: '60px'}
+          %h5.blue-text GoalLine
+          %hr
+          %h5.bold.center-align #{number_to_human(@balance)}
+.parallax-container
+  .parallax
+    %img{src: image_path('kids.jpg'), width:'100%'}
+  .parallax-title-right
+    %h1.white-text.right-align Your future...
+.parallax-container
+  .parallax
+    %img{src: image_path('DTS_Levels.png'), width:'100%'}
+  .parallax-title
+    %h1.center-align ...Attaining optimal performance
+  .parallax-title-right
+    %h1.blue-text.right-align by choosing your path.
+.section.grey.lighten-4
+  .row
+    %h3.center Contact Us
+    %br/
+    .col.s12.m4.offset-m2
+      %iframe{src:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.8803001057936!2d-111.89858398459339!3d40.764657379326174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f5045ab25817%3A0x53ae15762fc9cddd!2s175+W+200+S%2C+Salt+Lake+City%2C+UT+84101!5e0!3m2!1sen!2sus!4v1471711182014", width:"450", height:"350", frameborder:"0", style:"border:0"}
+    .col.s12.m4.offset-m1.custom-contact
+      %h5.bold STEAM Team
+      %h5 200 South 175 West (Garden Level)
+      %h5 Salt Lake City, UT 84103
+      %br/
+      %h5 1-801-808-4921
+      %h5 nick.baguley@evolvesteam.com

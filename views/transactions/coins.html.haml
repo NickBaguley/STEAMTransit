@@ -1,0 +1,65 @@
+.container
+  %ul.center-align
+    %li.no-padding
+      %img{src: image_path('Mu2.jpg'), height: '60px'}
+  %h3.orange-text.center-align STEAMCoin
+  %hr
+  .row
+  .container
+  %p.center-align STEAMcoin allows transactions that are evaluated by the following: Perceived Value & the # or frequency of Users.
+
+  %h4.center-align Enhanced Earning Potential
+  %p.center-align Each transaction results in Income / Revenue.
+  %hr
+  %br
+  .col.s12.center
+    .btn.custom-button.orange
+      =link_to 'Send Coin', new_transaction_path, {class: 'white-text'}
+    .card
+      .card-content
+        %h5.blue-text.center-align STEAMcoin Received
+        %table.centered
+          %thead
+            %tr
+              %th.bold Date
+              %th.bold From
+              %th.bold Details
+              %th.bold Perceived Value
+              %th.bold Frequency
+              %th.bold Amount
+          %tbody
+            - @received.each do |r|
+              %tr
+                %td
+                  = r.coin_transaction_date
+                %td
+                  = r.user.user_name
+                %td
+                  = r.details
+                %td
+                  = number_to_human(r.amount)
+  .row
+    .col.s12.center
+      .card
+        .card-content
+          %h5.blue-text STEAMcoin Sent
+          %table.centered
+            %thead
+              %tr
+                %th.bold Date
+                %th.bold From
+                %th.bold Details
+                %th.bold Perceived Value
+                %th.bold Frequency
+                %th.bold Amount
+            %tbody
+              - @sent.each do |s|
+                %tr
+                  %td
+                    = s.coin_transaction_date
+                  %td
+                    = User.user_name(s.receiver_id)
+                  %td
+                    = s.details
+                  %td
+                    = number_to_human(s.amount)

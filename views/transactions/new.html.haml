@@ -1,0 +1,29 @@
+.container
+  %ul.center-align
+    %li.no-padding
+      %img{src: image_path('Mu.jpg'), height: '60px'}
+  %h3.blue-text.center-align STEAMToken
+  %hr
+  %h2.center Send Token
+= form_for(resource, as: resource_name, url: new_transaction_path(resource_name), do |f|
+  = transactions
+  .field
+    = f.label :transactions
+    %br/
+    = f.email_field :email, autofocus: true
+  .actions
+    = f.submit "Send me reset password instructions"
+= render "devise/shared/links"
+  .field
+    = f.label :password
+  = f.inputs do
+    = f.input :account_id, :as => :hidden
+    = f.input :title, :label => false
+    = f.input :amount, :label => false
+    = f.inputs :for => :category do |c|
+      = c.input :title, :as => :string
+      = c.input :account_id, :as => :hidden
+  = f.buttons do
+    = f.submit "Save"
+
+    self.total_token_balance(user_id)

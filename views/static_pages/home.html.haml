@@ -1,0 +1,109 @@
+.parallax-container
+  .parallax
+    %img{src: image_path('153.jpg'), width:'100%'}
+  .parallax-title
+    %h1.white-text.center-align We'll pick you up!
+.section.grey.lighten-5
+  .row
+    .col.s10.offset-s1
+      .center.section-padding
+        %h2 Discover transit for your trips
+        %p
+          %h4 Help us be there for you
+          %br/
+          .btn.custom-button
+            %i{class:'material-icons'} person_pin
+            = link_to 'Bus Routes', new_user_registration_path, {method: :get, class:'white-text'}
+          .btn.custom-button
+            %i{class:'material-icons'} visibility
+            = link_to 'Bus Locator', new_user_registration_path, {method: :get, class:'white-text'}
+          %br/
+.section.grey.lighten-5
+  .row
+    .col.s12.m4.offset-m1
+      %iframe{src:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.8803001057936!2d-111.89858398459339!3d40.764657379326174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f5045ab25817%3A0x53ae15762fc9cddd!2s175+W+200+S%2C+Salt+Lake+City%2C+UT+84101!5e0!3m2!1sen!2sus!4v1471711182014", width:"450", height:"350", frameborder:"2", style:"border:2"}
+    .col.s12.m4.offset-m1
+      %img{src: image_path('153.jpg'), width:"450", height:"350"}
+.parallax-container
+  .parallax
+    %img{src: image_path('seat'), width:'100%'}
+  .parallax-title
+    %h1.blue-text.center-align Destination STEAM?
+  .parallax-title-right
+    %h1.blue-text.right-align What seat on the bus will you fill?
+.section.grey.lighten-4
+  .row
+    .col.s10.offset-s1
+      .center.section-padding
+        %h2 STEAM Transit is part of the STEAM Ecosystem
+        %p
+          %h4 An Innovation District designed to decrease barriers and take you to new opportunities!
+          %br/
+          .btn.custom-button
+            = link_to 'Join', new_user_registration_path, {method: :get, class:'white-text'}
+.parallax-container
+  .parallax
+    %img{src: image_path('Unique.jpg'), width:'100%'}
+  .parallax-title
+    %h1.white-text.center-align STEAM Community
+  .parallax-title-right
+    %h1.white-text.right-align Immeasurable
+    %h4.white-text.right-align Results
+.section.grey.lighten-1
+  .row
+    .col.s10.offset-s1
+      .center.section-padding
+        %h2 Symbiotic Collaboration
+        %p
+          %h4.white-text Who is your missing piece? Your Eyes or your Pen?
+          %h5.blue-text The STEAM Community allows all of us to work together in the shared economy. Transit is only one aspect of a WELL-Built Smart City. Learn about the future of Innovation in the Next Great American City!
+          %br/
+          .btn.custom-button
+            %i{class:'material-icons'} mode_edit
+            = link_to 'Hackers', new_user_registration_path, {method: :get, class:'white-text'}
+            %i{class:'material-icons'} code
+          .btn.custom-button
+            %i{class:'material-icons'} visibility
+            = link_to 'Founders', new_user_session_path, {method: :get, class:'white-text'}
+            %i{class:'material-icons'} trending_up
+          %br/
+          %h4.white-text All People to All Things
+          %br/
+          .btn.custom-button
+            %i{class:'medium material-icons'} recent_actors
+            = link_to 'Community', new_user_session_path, {method: :get, class:'white-text'}
+            %i{class:'material-icons'} present_to_all
+
+          %br/
+          %h5.blue-text A community is the only entity with a monopoly on skills.
+          %br/
+        %P
+
+        .btn.custom-button
+          %i{class:'material-icons'} supervisor_account
+          = link_to 'Master', registration_path, {class:'white-text'}
+        .btn.custom-button
+          %i{class:'material-icons'} person_pin
+          = link_to 'Apprentice', registration_path, {class:'white-text'}
+
+.parallax-container
+  .parallax
+    %img{src: image_path('DTS_Levels.png'), width:'100%'}
+  .parallax-title
+    %h1.center-align STEAM
+    %h4.center-align Optimize Performance
+.section.grey.lighten-3
+  .row
+    .col.s10.offset-s1
+      .center.section-padding
+        %h3.blue-text.center-align P.A.R.E.T.O. PERFORMANCE
+        %P
+          %h4 Air, Water, Light, Comfort, Fitness, Nutrition, Mind, & Community
+          %br/
+          WELL Built Environment that passively increases performance and designed to help you decrease drag and increase your productivity.
+          %br/
+          A Personal Data Lake for all entities to increase Self-Awareness and Optimize Performance.
+        %P
+
+        .btn.custom-button
+          = link_to 'Learn More', registration_path, {class:'white-text'}

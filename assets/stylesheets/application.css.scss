@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "materialize/components/color";
+$primary-color: #212121 !default;
+$secondary-color: #42a5f5 !default;
+@import 'materialize';
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Droid Serif', serif;
+}
+
+.custom-button {
+  border-radius: 15px !important;
+  font-family: 'Bitter', serif !important;
+  margin: 0px 20px 25px 0px;
+}
+
+.logo-padding {
+  padding-right: none;
+}
+
+.no-padding {
+  height: 60px;
+  padding: none;
+}
+
+.nav-background {
+  background-color: rgba(0, 0, 0, 1) !important;
+}
+
+.navbar-text {
+  font-family: 'Droid Serif', serif;
+  font-size: 10px;
+
+}
+
+.custom-footer {
+  padding: 0px 50px 0px 100px !important;
+  background-color: #212121 !important;
+}
+
+footer .row {
+  margin-bottom: 0px;
+}
